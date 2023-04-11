@@ -1,1 +1,1 @@
-# chrome-extension-
+# The timetable extension allows CUNY students to scheukde classes with ease. Once the extension is enabled, simply open while on CUNY scheduler page, enter your school and the course you want to enroll in. The extension will display the different class times and professors for the course. Once you find a time that works for you, select the class and submit!  
