@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" script-src='unsafe-inline';>
+
+  <link rel="stylesheet" href="sidepanel.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>TimeTable</title>
+</head>
+
+
+<body>
+  <header class="for-school" id="school-search-header">
+    <h1 class="title">timetable</h1>
+    <div class="search-field">
+      <form  class="search-form" id="initial-search-form">
+        <button type="submit" id="initial-submit" > <img src="images//seach-mag-glass.svg" alt="search button" class="search-submit"></button> 
+        <input type="search" id= "initial-searchbar" class="search-input" placeholder="Search College" title="Enter a valid school name using letters only">
+      </form>
+    </div>
+  </header>
+
+  <header class="for-class" id="class-search-header">
+    <h1 class="title">timetable</h1>
+    <h3 id="current-school"> Baruch</h3>
+    <div class="search-field">
+      <div class="filter-wrapper">
+        <button id="filter-btn"> 
+          <img src="/images/filter-img.svg" alt="filter button" class="filter-img">
+          <p class="filter-txt">Filter</p>
+          <img src="/images/down-arrow.svg" alt="" class="dropdown-arrow">
+        </button>
+        <ul class="filter-dropdown" id="filter-dropdown" >
+          <li class="filter-items"><button> Availability <img src="images/side-arrow.svg" alt="" class="side-arrow"></button>
+            <ul class="submenus" id="availability-filter">
+              <li><button class="availability-items"> Open </button></li>
+              <li><button class="availability-items"> Wait list </button></li>
+              <li><button class="availability-items"> Closed</button></li>
+            </ul>
+          </li>
+
+          <li class="filter-items"><button> Rating <img src="images/side-arrow.svg" alt="" class="side-arrow"></button>
+            <ul class="submenus" id="rating-filter">
+              <li><button class="rating-items"> 5 star and above </button></li>
+              <li><button class="rating-items"> 4 star and above </button></li>
+              <li><button class="rating-items"> 3 star and above </button></li>
+              <li><button class="rating-items"> 2 star and above </button></li>
+            </ul>
+          </li>
+          
+          <li><button class="filter-items"> Difficulty <img src="images/side-arrow.svg" alt="" class="side-arrow"></button>
+            <ul class="submenus" id="difficulty-filter">
+              <li><button class="difficulty-items"> 5/5 and above </button></li>
+              <li><button class="difficulty-items"> 4/5 and above </button></li>
+              <li><button class="difficulty-items"> 3/5 and above </button></li>
+              <li><button class="difficulty-items"> 2/5 and above </button></li>
+            </ul>
+          </li>
+          
+          <li><button class="filter-items"> Time <img src="images/side-arrow.svg" alt="" class="side-arrow"></button>
+            <ul class="submenus" id="time-filter">
+              <li><button class="time-items"> 6:00am - 12:00pm </button></li>
+              <li><button class="time-items"> 12:00pm - 5:00pm </button></li>
+              <li><button class="time-items"> 5:00pm - 11:00pm </button></li>
+            </ul>
+          </li>
+          
+          <li><button class="filter-items"> Day <img src="images/side-arrow.svg" alt="" class="side-arrow"></button>
+            <ul class="submenus" id="day-filter">
+              <li><button class="day-difficulty-items"> Mon/Wed </button></li>
+              <li><button class="day-difficulty-items"> Tues/Thurs </button></li>
+              <li><button class="day-difficulty-items"> Friday </button></li>
+              <li><button class="day-difficulty-items"> Sat/Sun </button></li>
+            </ul>
+          </li>
+
+
+        </ul>
+      </div>
+      <form  class="search-form" id="search-form">
+        <button type="submit" id="search-submit" > <img src="images//seach-mag-glass.svg" alt="search button" class="search-submit"></button> 
+        <input type="search" id= "searchbar" class="search-input" placeholder="Seach class" pattern="^[a-zA-Z]{3}\s\d{4}|[a-zA-Z]{3}\d{4}$" title="Enter valid subject code in the format 'abc 1234'">
+      </form>
+    </div>
+  </header>
+
+
+
+  <main id="main">
+    <div id="initial-wrapper">
+      <h1 id="start-txt">Enter your college in the search bar</h1>
+      <img id="start-img" src="/images/start-img.svg" alt="">
+    </div>
+    <h2 class="class-code" id="class-code"></h2>
+    <h3 class="class-name" id="class-name"></h3>
+    <div class="info-cont" id="info-cont"></div>
+  </main>
+
+  <script src="sidepanel.js"></script>
+
+</body>
+</html>
+

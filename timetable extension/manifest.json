@@ -1,0 +1,40 @@
+{
+    "manifest_version": 3,
+    "name": "TimeTable ",
+    "author": "Tahmidul Ambia",
+    "description": "Easy way to make your schedule",
+    "version": "1.0",
+   
+    "icons": {
+        "16" : "/images/temp-logo-16.png",
+        "48" : "/images/temp-logo-48.png",
+        "128" : "/images/temp-logo-128.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": [
+            "<all_urls>"	
+        ],
+        "js": ["content-script.js"],
+        "css": ["content.css"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["sidepanel.html", "images/logo.png" ],
+        "matches": ["<all_urls>"],
+        "extension_ids": ["hahmkldbbnnnnjggkgjoofojmihnccae"]
+      }
+    ],
+
+    "permissions": [
+         "tabs", "webNavigation", "scripting"
+      ]
+
+}
